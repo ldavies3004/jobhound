@@ -9,7 +9,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: #777;
+  color: #000000;
   font-weight: 300;
 }
 a {
@@ -357,19 +357,17 @@ a:focus {
 }
 
 #main-image {
-  background-image: url(../images/wood.jpg);
+  background-image: url(../images/background.jpeg);
   background-attachment: fixed;
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
   padding: 200px 0;
-  color: #fff;
 }
 
-#main-image .center-gap .h1 {
+#main-image.h1 {
   color: #000000
 }
-
 
 #services .box {
   padding-bottom: 0;
