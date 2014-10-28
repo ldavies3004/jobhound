@@ -10,6 +10,7 @@
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/prettyPhoto.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
     <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
@@ -36,11 +37,11 @@
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="#main-slider"><i class="icon-home"></i></a></li>
-                        <li><a href="/services">Services</a></li>
-                        <li><a href="#about-us">About Us</a></li>
-                        <li><a href="#contact">Contact</a></li>         
-                        <li><a href="#blog">Blog</a></li>
+                        <li class="active slide"><a href="#main-slider"><i class="icon-home"></i></a></li>
+                        <li><a href="./services.html">Services</a></li>
+                        <li class="slide"><a href="#about-us">About Us</a></li>
+                        <li class="slide"><a href="#contact">Contact</a></li>         
+                        <li><a href="http://blog.jobhound.co">Blog</a></li>
 
                     </ul>
                 </div>
@@ -124,19 +125,19 @@
                             <div class="row">
                                 <div class="col-sm-4">
                                     <div class="member">
-                                        <p><img class="img-responsive img-thumbnail img-circle" src="images/ken.jpg" alt="" ></p>
-                                        <h3>Ken Muraki<small class="designation">CTO and Founder</small></h3>
+                                        <p><img class="img-responsive img-thumbnail img-circle" src="images/ken.png" alt="" style="height: 200px;"></p>
+                                        <h3>Kensuke Muraki<small class="designation">CTO and Founder</small></h3>
                                     </div>
                                 </div>
                                 <div class="col-sm-4">
                                     <div class="member">
-                                        <p><img class="img-responsive img-thumbnail img-circle" src="images/lulu.jpg" alt="" ></p>
+                                        <p><img class="img-responsive img-thumbnail img-circle" src="images/lulu.jpg" alt="" style="height: 200px;"></p>
                                         <h3>Laura Davies<small class="designation">CEO and Founder</small></h3>
                                     </div>
                                 </div>        
                                 <div class="col-sm-4">
                                     <div class="member">
-                                        <p><img class="img-responsive img-thumbnail img-circle" src="images/download.jpeg" alt="" ></p>
+                                        <p><img class="img-responsive img-thumbnail img-circle" src="images/download.jpeg" alt="" style="height: 200px;"></p>
                                         <h3>Daniel Hulme<small class="designation">Advisor</small></h3>
                                     </div>
                                 </div>
@@ -157,16 +158,21 @@
                         <h1>Contact Form</h1>
                         <p>Please get in touch using the form below for more information about our services</p>
                         <div class="status alert alert-success" style="display: none"></div>
-                        <form id="main-contact-form" class="contact-form" name="contact-form" method="post" action="sendemail.php" role="form">
+                        <form id="main-contact-form" class="contact-form" name="contact-form" method="POST" role="form" onSubmit="send_contact_form(); return false;">
                             <div class="row">
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" required="required" placeholder="Name">
+                                        <input name="name" id="name" type="text" class="form-control" required="required" placeholder="Name">
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" required="required" placeholder="Email address">
+                                        <input name="email" id="email" type="text" class="form-control" required="required" placeholder="Email address">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <input name="subject" id="subject" type="text" class="form-control" required="required" placeholder="Subject">
                                     </div>
                                 </div>
                             </div>
@@ -176,7 +182,8 @@
                                         <textarea name="message" id="message" required="required" class="form-control" rows="8" placeholder="Message"></textarea>
                                     </div>
                                     <div class="form-group">
-                                        <button type="submit" class="btn btn-danger btn-lg">Send Message</button>
+                                        <button type="submit" value="submit" class="btn btn-danger btn-lg">Send Message</button>
+                                        <!--<input type="submit" value="submit" class="btn btn-danger btn-lg"></button>-->
                                     </div>
                                 </div>
                             </div>
@@ -193,6 +200,7 @@
                                 </address>
                             </div>
                         </div>
+			<!--
                         <h1>Connect with us</h1>
                         <div class="row">
                             <div class="col-md-6">
@@ -203,6 +211,7 @@
 
                             </div>
                         </div>
+			-->
                     </div><!--/.col-sm-6-->
                 </div><!--/.row-->
             </div><!--/.box-->
@@ -213,11 +222,13 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-6">
-                    &copy; 2013 <a target="_blank" href="http://shapebootstrap.net/" title="Free Twitter Bootstrap WordPress Themes and HTML templates">ShapeBootstrap</a>. All Rights Reserved.
+                    &copy; 2014 <a href="http://www.jobhound.co/" title="JobHound Homepage">JobHound Ltd</a>. All Rights Reserved.
                 </div>
+		<!--
                 <div class="col-sm-6">
                     <img class="pull-right" src="images/shapebootstrap.png" alt="ShapeBootstrap" title="ShapeBootstrap">
                 </div>
+		-->
             </div>
         </div>
     </footer><!--/#footer-->
@@ -227,5 +238,6 @@
     <script src="js/jquery.isotope.min.js"></script>
     <script src="js/jquery.prettyPhoto.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/mail.js"></script>
 </body>
 </html>

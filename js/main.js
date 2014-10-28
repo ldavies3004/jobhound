@@ -10,15 +10,16 @@ jQuery(function($) {
 	//Ajax contact
 	var form = $('.contact-form');
 	form.submit(function () {
+		var message = 'Email sent! We will try getting back to you as soon as possible.';
 		$this = $(this);
-		$.post($(this).attr('action'), function(data) {
-			$this.prev().text(data.message).fadeIn().delay(3000).fadeOut();
-		},'json');
+		//$.post($(this).attr('action'), function(data) {
+		$this.prev().text(message).fadeIn().delay(3000).fadeOut();
+		//},'json');
 		return false;
 	});
 
 	//smooth scroll
-	$('.navbar-nav > li').click(function(event) {
+	$('.navbar-nav > li.slide').click(function(event) {
 		event.preventDefault();
 		var target = $(this).find('>a').prop('hash');
 		$('html, body').animate({

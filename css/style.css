@@ -1,0 +1,7 @@
+col-sm-4 {
+    width: 100%!important;
+}
+
+form#main-contact-form .col-sm-6 {
+    margin-bottom: 0;
+}
